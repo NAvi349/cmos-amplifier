@@ -61,8 +61,11 @@ This VGS is given as input to another MOSFET. Since both have same gate-source v
 The output current is given by 
 
 ## Cascoding of transistors
+
 Purpose: To increase the stability against supply distortions and to increase the impedance of a current-source load.
+
 Approach: A single MOSFET acting as a current source does not provide much stability and output impedance.
+
 Solution: We can stack transistors on top of another to increase the output impedance. The output impedance is = ro1 * gm1 * ro2. Gain also increased if it is used as a load.
 
 # CMOS Differential Amplifier
