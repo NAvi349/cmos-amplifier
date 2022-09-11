@@ -80,3 +80,5 @@ We can now apply the topologies we studied to design an NMOS Differential Amplif
 # Result
 Thus an amplifier suitable for implementation in an integrated circuit is designed.
 
+# References
+-Images taken from Razavi and Donald. A Neamen Books
