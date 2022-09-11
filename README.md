@@ -15,29 +15,46 @@ We need six important concepts or topologies to build such an amplifier:
 
 ## Dual power supply
 **Aim:** To remove voltage-divider network and capacitors at the input
+
 **Approach:** Voltage divider at the input is provided such that the Gate is at higher potential than the source. But the biasing resistors and hence the input-coupling capacitors are a problem.
+
 **Solution:** We can provide a negative power supply VSS also. Now the Source is at a lower potential than Gate. We use a source resistor to establish the bias current. Similar to emitter bias configuration of BJT.
+
 Bias current:  I_SS  =((- V_GS- V_ss))/R_D     where VSS = -VDD
 
 ## Differential pair
 Purpose: To remove source bypass capacitor at the source.
+
 Approach: We need a device that provides low-impedance path to ac.
+
 Solution: Looking towards the source terminal we see a small-signal impedance of  1/gm  . So we couple two NMOS at the source terminal.
+
 ## Current source biasing
 Purpose: To remove bias resistor RS at the source.
+
 Approach: Using resistor biasing at the source reduces gain due to negative feedback.
+
 Solution: We can replace the bias resistor directly by a current source ISS. It does not affect the small-signal gain. The current source is a NMOS biased in saturation.
+
 ## Current source load
+
 Purpose: To remove load resistor RD.
+
 Approach: Output Gain = -〖 g〗_m*R_D . RD is used to provide gain but also provides a voltage drop. Reduction is the positive swing. Saturation condition: V_GS- V_DS≤ V_TH
 Using RD ¬limits the positive swing of the output ac-signal. We need a device which provides large impedance to ac but does not limit the positive swing.
+
 Solution: Looking towards the drain-terminal we can see a small-signal impedance rO due to channel-length modulation.  r_o=1/(λ *〖 I〗_D )  This is very large.
 So we can use a common-source PMOS (acting as a current source) as a load element. 
 Now gain = -〖 g〗_m* r_o
+
 ## Current Mirror
+
 Purpose: To copy a highly stable reference current into other circuits.
+
 Approach: We need a highly stable current source that has a high resistance to DC voltage distortions. 
-Solution: A reference current is established by using a band-gap reference circuit or by a MOSFET in saturation. We then pass this reference current through a diode-connected MOSFET (Gate and Drain terminal shorted together). Now the VGS given by
+
+Solution: A reference current is established by using a band-gap reference circuit or by a MOSFET in saturation. We then pass this reference current through a diode-connected 
+MOSFET (Gate and Drain terminal shorted together). Now the VGS given by
 
 
 This VGS is given as input to another MOSFET. Since both have same gate-source voltage they have the same Drain Current. This current mirror is used to implement the current-source as a load and current-source as a bias element.
