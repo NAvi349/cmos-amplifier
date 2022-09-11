@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/66086031/189542813-db7a009d-3f68-4366-8322-7e83cc3e1284.png)
+
+
 # Motivation and Aim
 To design an amplifier that does not contain any biasing resistors and bypass capacitors.
 
